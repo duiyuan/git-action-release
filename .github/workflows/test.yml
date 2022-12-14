@@ -20,5 +20,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: ./
+        name: release
         with:
           milliseconds: 1000
+      - name: 'get output time'
+        run: |
+          echo 'The time was ${{ steps.release.outputs.time }}'
