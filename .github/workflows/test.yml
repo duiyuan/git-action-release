@@ -17,12 +17,13 @@ jobs:
           npm run all
   test: # make sure the action works on a clean machine without building
     runs-on: ubuntu-latest
+    needs: ['build']
     steps:
       - uses: actions/checkout@v3
       - uses: ./
-        name: release
+        id: release
         with:
-          milliseconds: 1000
+          milliseconds: 5120
       - name: 'get output time'
         run: |
           echo 'The time was ${{ steps.release.outputs.time }}'
