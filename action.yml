@@ -6,6 +6,9 @@ inputs:
     required: true
     description: 'milliseconds'
     default: '3000'
+outputs:
+  time:
+    description: 'The time we output'
 runs:
   using: 'node16'
   main: 'dist/index.js'
