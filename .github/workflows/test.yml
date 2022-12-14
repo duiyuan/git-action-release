@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: ./
-        name: release
+        id: release
         with:
           milliseconds: 5120
       - name: 'get output time'
