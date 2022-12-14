@@ -1,11 +1,11 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'git-action-release'
+description: 'A GitHub Action for creating GitHub Releases'
+author: 'shangwenwang20@gmail.com'
 inputs:
   milliseconds: # change this
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: 'milliseconds'
+    default: '3000'
 runs:
   using: 'node16'
   main: 'dist/index.js'
