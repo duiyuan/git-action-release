@@ -22,7 +22,7 @@ jobs:
       - uses: ./
         name: release
         with:
-          milliseconds: 1000
+          milliseconds: 5120
       - name: 'get output time'
         run: |
           echo 'The time was ${{ steps.release.outputs.time }}'
