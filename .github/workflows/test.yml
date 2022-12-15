@@ -23,7 +23,7 @@ jobs:
       - uses: ./
         id: release
         with:
-          milliseconds: 5120
-      - name: 'get output time'
+          release-type: node
+      - name: 'Get upload url'
         run: |
-          echo 'The time was ${{ steps.release.outputs.time }}'
+          echo 'The time was ${{ steps.release.outputs.upload_url }}'
