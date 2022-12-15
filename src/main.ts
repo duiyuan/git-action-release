@@ -105,10 +105,6 @@ async function main() {
   }
 }
 
-const releasePlease = {
-  main
-}
-
 function getGitHubInstance() {
   const { token, defaultBranch, apiUrl, graphqlUrl, repoUrl, proxyServer } =
     getGitHubInput()
@@ -127,7 +123,7 @@ function getGitHubInstance() {
     apiUrl,
     graphqlUrl,
     token,
-    defaultBranch: defaultBranch
+    defaultBranch
   })
 }
 
